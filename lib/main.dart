@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/lesson2/delimeters_calculator.dart';
 
 void main() {
+
+  DelimetersCalculator delimetersCalculator = DelimetersCalculator();
+
+  int nod = delimetersCalculator.nod(12123, -123123);
+  print('nod: $nod');
+  int dodOriginal = 12123.gcd(-123123);
+  print('dodOriginal: $dodOriginal');
+  
   runApp(const MyApp());
 }
 
