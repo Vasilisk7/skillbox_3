@@ -2,8 +2,7 @@ import 'dart:math';
 
 /// Реализуйте методы вычисления НОД и НОК целых чисел.
 /// Реализуйте метод, который разбивает число на простые множители и возвращает их.
-class DelimetersCalculator  {
-
+class DelimetersCalculator {
   /// Наибольший общий делитель
   int nod(final int numberOne, final int numberTwo) {
     final int numberOneAbs = numberOne.abs();
@@ -21,9 +20,9 @@ class DelimetersCalculator  {
       return numberOneAbs;
     }
 
-    final int largest  = max(numberOneAbs,numberTwoAbs);
+    final int largest = max(numberOneAbs, numberTwoAbs);
     int nod = largest;
-    while(nod > 0) {
+    while (nod > 0) {
       int remainderOfDivisionX = numberOneAbs % nod;
       int remainderOfDivisionY = numberTwoAbs % nod;
       if (remainderOfDivisionX == 0 && remainderOfDivisionY == 0) {
@@ -36,7 +35,11 @@ class DelimetersCalculator  {
   }
 
   /// Наименьшее общее кратное
-  void nok(int x, int y) {
+  int nok(final int numberOne, final int numberTwo) {
+    if (numberOne == 0  || numberTwo == 0) {
+      return 0;
+    }
 
+    return (numberOne.abs() / nod(numberOne, numberTwo) * numberTwo.abs()).toInt();
   }
 }

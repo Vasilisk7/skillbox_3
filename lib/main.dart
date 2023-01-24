@@ -9,6 +9,9 @@ void main() {
   print('nod: $nod');
   int dodOriginal = 12123.gcd(-123123);
   print('dodOriginal: $dodOriginal');
+
+  int nok = delimetersCalculator.nok(4565463, 1212366);
+  print('nok: $nok');
   
   runApp(const MyApp());
 }
