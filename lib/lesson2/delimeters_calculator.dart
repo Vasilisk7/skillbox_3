@@ -36,10 +36,34 @@ class DelimetersCalculator {
 
   /// Наименьшее общее кратное
   int nok(final int numberOne, final int numberTwo) {
-    if (numberOne == 0  || numberTwo == 0) {
+    if (numberOne == 0 || numberTwo == 0) {
       return 0;
     }
 
     return (numberOne.abs() / nod(numberOne, numberTwo) * numberTwo.abs()).toInt();
+  }
+
+  /// Разбивает число на простые множители и возвращает их.
+  List<int> numberIntoPrimeFactors(final int inputNumber) {
+    final List<int> result = List.empty(growable: true);
+    int currentValue = inputNumber.abs();
+    if (currentValue == 1) {
+      result.add(1);
+      return result;
+    }
+    int multiplier = 2;
+
+    while (currentValue != 1) {
+      if (currentValue % multiplier == 0) {
+        result.add(multiplier);
+        currentValue ~/= multiplier;
+      } else if (multiplier == 2) {
+        multiplier++;
+      } else {
+        multiplier += 2;
+      }
+    }
+
+    return result;
   }
 }

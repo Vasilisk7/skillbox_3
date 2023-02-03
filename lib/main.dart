@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:untitled/lesson2/delimeters_calculator.dart';
 
 void main() {
-
   DelimetersCalculator delimetersCalculator = DelimetersCalculator();
 
   int nod = delimetersCalculator.nod(12123, -123123);
@@ -12,7 +11,10 @@ void main() {
 
   int nok = delimetersCalculator.nok(4565463, 1212366);
   print('nok: $nok');
-  
+
+  List<int> primeFactors = delimetersCalculator.numberIntoPrimeFactors(-56);
+  print('primeFactors: $primeFactors');
+
   runApp(const MyApp());
 }
 
