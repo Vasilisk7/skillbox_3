@@ -28,7 +28,32 @@ void main() {
   print('stringNumConverter: ${stringNumConverter.toNum('sf we 1 5 0.2  infinity  ')}');
 
   //---------- 4 задание --------------
-  print('wordCount: ${stringNumConverter.wordCount(['wow','q','q','k','q','qweqwe','1','090t'])}');
+  print('wordCount: ${stringNumConverter.wordCount([
+        'wow',
+        'q',
+        'q',
+        'k',
+        'q',
+        'qweqwe',
+        '1',
+        '090t'
+      ])}');
+
+  //---------- 5 задание --------------
+  print('wordToNum: ${stringNumConverter.wordToNum([
+        'wow',
+        'q',
+        'q',
+        'one',
+        'k',
+        'one',
+        ' one ',
+        'two',
+        'sdffsd',
+        '2',
+        '25',
+        'zero'
+      ])}');
 
   runApp(const MyApp());
 }
