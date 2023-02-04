@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/lesson2/decimal.dart';
 import 'package:untitled/lesson2/delimeters_calculator.dart';
 
 void main() {
+  //---------- 1 задание --------------
   DelimetersCalculator delimetersCalculator = DelimetersCalculator();
 
   int nod = delimetersCalculator.nod(12123, -123123);
@@ -14,6 +16,11 @@ void main() {
 
   List<int> primeFactors = delimetersCalculator.numberIntoPrimeFactors(-56);
   print('primeFactors: $primeFactors');
+
+  //---------- 2 задание --------------
+  Decimal decimal = Decimal();
+  print('decimalToBinary: ${decimal.decimalToBinary(35412313123)}');
+  print('binaryToDecimal: ${decimal.binaryToDecimal("апвап")}');
 
   runApp(const MyApp());
 }
