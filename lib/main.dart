@@ -1,6 +1,9 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:untitled/lesson2/decimal.dart';
 import 'package:untitled/lesson2/delimeters_calculator.dart';
+import 'package:untitled/lesson2/point.dart';
 import 'package:untitled/lesson2/string_num_converter.dart';
 
 void main() {
@@ -54,6 +57,10 @@ void main() {
         '25',
         'zero'
       ])}');
+
+//---------- 6 задание --------------
+  Point point = Point.single();
+  print('distanceTo: ${point.distanceTo(Point(2, 4, 1))}');
 
   runApp(const MyApp());
 }
