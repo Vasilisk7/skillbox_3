@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/lesson2/decimal.dart';
 import 'package:untitled/lesson2/delimeters_calculator.dart';
+import 'package:untitled/lesson2/string_num_converter.dart';
 
 void main() {
   //---------- 1 задание --------------
@@ -20,7 +21,14 @@ void main() {
   //---------- 2 задание --------------
   Decimal decimal = Decimal();
   print('decimalToBinary: ${decimal.decimalToBinary(35412313123)}');
-  print('binaryToDecimal: ${decimal.binaryToDecimal("апвап")}');
+  print('binaryToDecimal: ${decimal.binaryToDecimal('010101')}');
+
+  //---------- 3 задание --------------
+  StringNumConverter stringNumConverter = StringNumConverter();
+  print('stringNumConverter: ${stringNumConverter.toNum('sf we 1 5 0.2  infinity  ')}');
+
+  //---------- 4 задание --------------
+  print('wordCount: ${stringNumConverter.wordCount(['wow','q','q','k','q','qweqwe','1','090t'])}');
 
   runApp(const MyApp());
 }
