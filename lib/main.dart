@@ -1,11 +1,13 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:untitled/lesson2/decimal.dart';
 import 'package:untitled/lesson2/delimeters_calculator.dart';
+import 'package:untitled/lesson2/extension_num.dart';
 import 'package:untitled/lesson2/point.dart';
 import 'package:untitled/lesson2/string_num_converter.dart';
-import 'package:untitled/lesson2/extension_num.dart';
+import 'package:untitled/lesson2/user.dart';
+import 'package:untitled/lesson2/user_manager.dart';
+
+import 'lesson2/admin_user.dart';
 
 void main() {
   //---------- 1 задание --------------
@@ -68,10 +70,24 @@ void main() {
   double degree = 3.56;
   try {
     print('nthDegreeRoot: ${superNum.nthDegreeRoot(degree)}');
-  } catch(e) {
+  } catch (e) {
     print('Ошибка вычисления корня со степенью $degree');
   }
 
+//---------- 8 задание --------------
+  final AdminUser adminUser = AdminUser('adminUser@mail.ru');
+  print('getMailSystem: ${adminUser.getMailSystem()}');
+
+  final User userVasy = User('vasy@gmail.com');
+  final User userDima = User('dima@yandex.ru');
+
+  final UserManager<User> userManager = UserManager();
+  userManager.store(userVasy);
+  userManager.store(userDima);
+  userManager.store(adminUser);
+  userManager.delete(userDima);
+
+  print('getAllMails: ${userManager.getAllMails()}');
 
   runApp(const MyApp());
 }
