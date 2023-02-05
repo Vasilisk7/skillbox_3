@@ -5,6 +5,7 @@ import 'package:untitled/lesson2/decimal.dart';
 import 'package:untitled/lesson2/delimeters_calculator.dart';
 import 'package:untitled/lesson2/point.dart';
 import 'package:untitled/lesson2/string_num_converter.dart';
+import 'package:untitled/lesson2/extension_num.dart';
 
 void main() {
   //---------- 1 задание --------------
@@ -58,9 +59,19 @@ void main() {
         'zero'
       ])}');
 
-//---------- 6 задание --------------
+  //---------- 6 задание --------------
   Point point = Point.single();
   print('distanceTo: ${point.distanceTo(Point(2, 4, 1))}');
+
+  //---------- 7 задание --------------
+  num superNum = 9;
+  double degree = 3.56;
+  try {
+    print('nthDegreeRoot: ${superNum.nthDegreeRoot(degree)}');
+  } catch(e) {
+    print('Ошибка вычисления корня со степенью $degree');
+  }
+
 
   runApp(const MyApp());
 }
